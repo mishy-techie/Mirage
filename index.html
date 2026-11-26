@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirage: the memory game that moves</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 class="syne">MIRAGE</h1>
+<p class="tag">The memory game where the board moves.</p>
+
+<details class="set panel w"><summary class="syne">⚙️ Settings <span class="hint">theme, sound</span></summary>
+<div class="bar"><button class="pill" id="themeBtn">🌙 Dark</button><button class="pill" id="soundBtn">🔊 Sound on</button></div>
+</details>
+
+<div class="label syne">🌗 Pick your weather</div>
+<div class="seg w" role="group" aria-label="Weather">
+  <button data-m="clear" aria-pressed="true">☀️ Clear<small>board stays still</small></button>
+  <button data-m="mist" aria-pressed="false">🌫️ Mist<small>1 swap per miss</small></button>
+  <button data-m="storm" aria-pressed="false">⛈️ Storm<small>2 swaps per miss</small></button>
+</div>
+
+<div class="hud panel w">
+  <div><b id="hm">0</b>Moves</div>
+  <div><b id="hp">0/8</b>Pairs</div>
+  <div><b id="ht">0:00</b>Time</div>
+  <div><b id="hb">-</b>Best</div>
+</div>
+
+<div id="msg" class="w" aria-live="polite"></div>
+<div id="board" class="w" role="group" aria-label="Memory board"></div>
+<div id="result" class="panel w"><div class="st" id="stars"></div><div class="syne" id="rt"></div><p id="rp"></p></div>
+
+<div class="row">
+  <button class="pill" id="glimpse">🔮 Glimpse (+3 moves)</button>
+  <button class="pill" id="newBtn">🔁 New game</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
